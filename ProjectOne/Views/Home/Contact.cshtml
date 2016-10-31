@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<h4><u>Department Information</u></h4>
+<p>790A TNRB <br /> 801-422-5704 <br /> <a href="mailto:is.department@byu.edu">is.department@byu.edu</a> <br /><br /></p>
+
+
+<h4><u>Advisement Center</u></h4>
+<p>460 TNRB <br /> 801-422-4285 <br /> <a href="mailto:msm_advisement@byu.edu">msm_advisement@byu.edu</a> <br /><br /></p>
+
+
+<h4><u>Feel free to submit a question or comment below:</u></h4>
+<form id="myForm">
+
+    First name:<br>
+    <input type="text" name="firstname" value=""><br>
+    
+    Last name:<br>
+    <input type="text" name="lastname" value=""><br>
+    
+    Email:<br />
+    <input type="text" name="email" value="" /><br />
+   
+    Question/Comment:<br />
+     <input type="text" name="question" value="" /><br /><br />
+    <input type="submit" onclick="clearForm()" value="Submit">
+</form>
+
+<script>
+function clearForm() {
+    document.getElementById("myForm").reset();
+}
+</script>

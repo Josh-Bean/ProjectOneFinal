@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Information Systems Management</h1>
+    <p class="lead">Welcome, prospective Information Systesm students</p>
+    <p><a href="https://marriottschool.byu.edu/bsis/" class="btn btn-primary btn-lg">BYU IS Website &raquo;</a></p>
+    <p><a href="https://catalog.byu.edu/management/information-systems/information-systems-bs-0" class="btn btn-primary btn-lg">Program Prequisites and Requirements &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>About</h2>
+        <p>
+            An information system (IS) is any organized system for the collection, organization, storage and communication of information. 
+            More specifically, it is the study of complementary networks that people and organizations use to collect, filter, process, create 
+            and distribute data.
+            
+        </p>
+        <p><a class="btn btn-default" href='@Url.Action("About", "Home")'>Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Degrees</h2>
+        <p>Within the Information Systems major, there is opporunity to receive a Bachelors or a Masters degree, click below to learn more!</p>
+        <p><a class="btn btn-default" href='@Url.Action("Degrees", "Home")'>Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Contact</h2>
+        <p>There are plenty of resources to help you resolve any concerns you may have if you still have questions.</p>
+        <p><a class="btn btn-default" href='@Url.Action("Contact", "Home")'>Learn more &raquo;</a></p>
+    </div>
+</div>
