@@ -1,4 +1,7 @@
 ﻿/* Joshua Bean, Section 2, Group 14, October 31, 2016, Project One
+ * 
+ * Link to my Repository on GitHub: https://github.com/Josh-Bean/ProjectOneFinal
+ * 
  * IDEA 2 – Student FAQ for BYUIS Site
 
 Create an MVC website that will allow perspective Students to ask questions of current/past students of Brigham Young University Information
