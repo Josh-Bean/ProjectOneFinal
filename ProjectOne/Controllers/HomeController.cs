@@ -8,11 +8,13 @@ namespace ProjectOne.Controllers
 {
     public class HomeController : Controller
     {
+        //This method calls up my landing page
         public ActionResult Index()
         {
             return View();
         }
 
+        //This method calls up my about page
         public ActionResult About()
         {
             ViewBag.Message = "What is Information Systems?";
@@ -20,6 +22,7 @@ namespace ProjectOne.Controllers
             return View();
         }
 
+        //This method calls up my contact view
         public ActionResult Contact()
         {
             ViewBag.Message = "Still have questions?";
@@ -27,6 +30,7 @@ namespace ProjectOne.Controllers
             return View();
         }
 
+        //This method calls up my Degrees view
         public ActionResult Degrees()
         {
             ViewBag.Message = "Your degrees page";
@@ -34,6 +38,7 @@ namespace ProjectOne.Controllers
             return View();
         }
 
+        //This method calls up a dynamically created view depending on if the user selects BSIS or MISM
         public ActionResult SelectedDegree(string degree)
         {
             if (degree == "BSIS")

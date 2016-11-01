@@ -2,20 +2,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<!--This is my bread crumb that enables easier navigation-->
 <div class="container-fluid">
     <ol class="breadcrumb">
         <li class="active"><a href='@Url.Action("Index", "Home")'>Home</li>
         <li><a href='@Url.Action("Degrees","Home")'>Degrees</a></li>
 
     </ol>
-
-
 </div>
 
 
-
+<!--This is my title of the page -->
 <h1>Selected Degree: @ViewBag.Title</h1>
 
+<!--This information varies depending on what was selected, BSIS or MISM, and is centered on the coordinator-->
 <p>
     @ViewBag.DegreeName <br />
     @ViewBag.Coordinator, @ViewBag.ProfTitle <br />
@@ -25,8 +25,10 @@
     Office :@ViewBag.OfficeAddress <br />
 </p>
 
+<!--A header-->
 <h2 style="font:bold">Education:</h2>
 
+<!--Information on the Coordinator's educational background-->
 <p>
     @ViewBag.PhDEducation <br />
     @ViewBag.MastersEd <br />
@@ -36,8 +38,11 @@
     <br /> <br />
 </p>
 
+<!--A header-->
 <h2 style="font:bold">Frequently Asked Questions</h2>
 
+<!--The majority of the rest of the page has this following format, h4 tags to represent a question on the FAQ, p tags contain the response
+    and then beneath the p tags is a container that as a modal popup for a response-->
 <h4><u>How do I apply?</u></h4>
 <p>To apply, please complete the online application found at https://marriottschool.byu.edu/apply/bsis/. </p>
 
@@ -422,6 +427,8 @@
 </div> <!-- /.container -->
 
 <br />
+
+<!--This allows the user to submit a question or a comment-->
 <h4><u>Feel free to submit a question or comment below:</u></h4>
 <form id="myForm">
 
@@ -448,7 +455,7 @@ function clearForm() {
 
 
 
-
+<!--This allows the user, that the bottom of the screen to be able to select another degree if they desire-->
 <p><br /><br />Select another degree to learn more</p>
 
 <div class="dropdown">
