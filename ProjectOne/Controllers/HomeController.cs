@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace ProjectOne.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         //This method calls up my landing page
