@@ -73,5 +73,12 @@ namespace ProjectOne.Controllers
             return View();
         }
 
+
+        //Login Method
+        public ActionResult Login()
+        {
+            return View();
+        }
+
     }
 }

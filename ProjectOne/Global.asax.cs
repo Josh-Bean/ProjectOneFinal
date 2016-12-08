@@ -16,7 +16,7 @@ namespace ProjectOne
     {
         protected void Application_Start()
         {
-            Database.SetInitializer<DegreesContext>(null)
+            Database.SetInitializer<DegreeContext>(null);
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
