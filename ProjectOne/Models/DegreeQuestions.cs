@@ -12,9 +12,17 @@ namespace ProjectOne.Models
     {
         [Key]
         public int DegreeQuestionID { get; set; }
+
+        [Required(ErrorMessage = "Please enter in a degree ID")]
         public int DegreeID { get; set; }
+
+        [Required(ErrorMessage = "Please enter in a user ID")]
         public int UserID { get; set; }
+
+        [Required(ErrorMessage = "Please enter in a question")]
         public String Question { get; set; }
+
+        [Required(ErrorMessage = "Please enter in an answer")]
         public String Answer { get; set; }
     }
 }

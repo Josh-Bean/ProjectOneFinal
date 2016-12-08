@@ -12,12 +12,26 @@ namespace ProjectOne.Models
     {
         [Key]
         public int DegreeID { get; set; }
+
+        [Required(ErrorMessage="Please enter in a name for the degree")]
         public String Name { get; set; }
+
+        [Required(ErrorMessage = "Please enter in a name for the coordinator")]
         public String Coordinator { get; set; }
+
+        [Required(ErrorMessage = "Please enter in the coordinator title")]
         public String CoordinatorTitle { get; set;}
+
+        [Required(ErrorMessage = "Please enter in the coordinator office address")]
         public String CoordinatorOffice { get; set; }
+
+        [Required(ErrorMessage = "Please enter coordinator's PhD Education")]
         public String PhDEducation { get; set; }
+
+        [Required(ErrorMessage="Please enter in coordinator's Bachelors Education")]
         public String BachelorsEducation { get; set; }
+
+        [Required(ErrorMessage = "Please enter in the path to the Coordinator Picture")]
         public String CoordinatorPicture { get; set; }
     }
 }
