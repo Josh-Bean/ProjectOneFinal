@@ -80,5 +80,11 @@ namespace ProjectOne.Controllers
             return View();
         }
 
+        //Register Method will allow the user to create a new account by entering their email and a password
+        public ActionResult Register()
+        {
+            return View();
+        }
+
     }
 }
