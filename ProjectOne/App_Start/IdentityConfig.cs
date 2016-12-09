@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Joshua Bean, Section 2, Group 14, Last Modified: December 8th, 2016, BYU IS FAQ Page
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;

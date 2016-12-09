@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿//Joshua Bean, Section 2, Group 14, Last Modified: December 8th, 2016, BYU IS FAQ Page
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ProjectOne.Models
