@@ -44,6 +44,7 @@ namespace ProjectOne.Controllers
         }
 
         //This method calls up a dynamically created view depending on if the user selects BSIS or MISM
+        [Authorize]
         public ActionResult SelectedDegree(string degree)
         {
             if (degree == "BSIS")
@@ -84,6 +85,39 @@ namespace ProjectOne.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Login(Users account, FormCollection form, int? id, bool rememberMe = false)
+        {
+            Session["degrees"] = id;
+            //Session["userID"] = userid;
+
+            using (DegreeContext db = new DegreeContext())
+            {
+                //var usr = db.user.Single(u => u.userEmail = account.userEmail && u.uPassword == account.uPassword).FirstOrDefault;
+                var usr = db.User.Where(Users => Users.Email == account.Email && Users.Password == account.Password).FirstOrDefault();
+                if (usr != null)
+                {
+                    Session["UserID"] = usr.UserID.ToString();
+                    Session["username"] = usr.Email.ToString();
+                    FormsAuthentication.SetAuthCookie(usr.Email, rememberMe);
+                    return RedirectToAction("Degrees", "Home", new { id = Session["degrees"], userid = Session["UserID"] });
+                    // return RedirectToAction("Index", "MissionQuestions", new { id = Session["mission"] });
+
+                }
+                else
+                {
+                    ModelState.AddModelError(" ", "Username or password is wrong. ");
+                    // return RedirectToAction("Index");
+                }
+
+
+            }
+            return View();
+
+
+        }
+
 
         //Register Method will allow the user to create a new account by entering their email and a password
         public ActionResult Register()
