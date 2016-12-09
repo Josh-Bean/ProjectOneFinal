@@ -9,7 +9,6 @@ using System.Web.Security;
 
 namespace ProjectOne.Controllers
 {
-    [RequireHttps]
     public class HomeController : Controller
     {
         private DegreeContext db = new DegreeContext();
