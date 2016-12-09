@@ -91,20 +91,12 @@ namespace ProjectOne.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult CreateUser()
-        {
-            return View();
-        }
-
         [HttpPost]
         //[ValidateAntiForgeryToken]
         public ActionResult Register(Users account, bool bRememberMe = false)
         {
             if (ModelState.IsValid)
             {
-
-
                 db.User.Add(account);
                 db.SaveChanges();
 
