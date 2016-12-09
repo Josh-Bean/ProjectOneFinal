@@ -1,9 +1,11 @@
 ﻿using ProjectOne.DAL;
+using ProjectOne.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace ProjectOne.Controllers
 {
@@ -96,9 +98,27 @@ namespace ProjectOne.Controllers
             return View();
         }
 
-        //[HttpPost]
+        [HttpPost]
         //[ValidateAntiForgeryToken]
-        //public ActionResult CreateUser([Bind(Include = "UserID, Email, Password, FirstName, LastName")])
+        public ActionResult Register(Users account, bool bRememberMe = false)
+        {
+            if (ModelState.IsValid)
+            {
+
+
+                db.User.Add(account);
+                db.SaveChanges();
+
+                ModelState.Clear();
+                Session["UserID"] = account.UserID;
+                Session["Username"] = account.Email;
+                FormsAuthentication.SetAuthCookie(account.Email.ToString(), bRememberMe);
+
+                return RedirectToAction("Degrees");
+            }
+
+            return View();
+        }
 
     }
 }
