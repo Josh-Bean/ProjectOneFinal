@@ -14,18 +14,12 @@ namespace ProjectOne.Models
         [Key]
         public int DegreeQuestionID { get; set; }
 
-        [Required]
-        [ForeignKey("DegreeID")]
-        public virtual DegreeQuestions DegreeID { get; set; }
+        public int DegreeID { get; set; }
 
-       [Required]
-       [ForeignKey("UserID")]
-        public virtual Users UserID { get; set; }
+        public int UserID { get; set; }
 
-        [Required(ErrorMessage = "Please enter in a question")]
         public String Question { get; set; }
 
-        [Required(ErrorMessage = "Please enter in an answer")]
         public String Answer { get; set; }
     }
 }
