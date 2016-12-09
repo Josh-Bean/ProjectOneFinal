@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectOne.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,8 +7,11 @@ using System.Web.Mvc;
 
 namespace ProjectOne.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
+        private DegreeContext db = new DegreeContext();
+
         //This method calls up my landing page
         public ActionResult Index()
         {
