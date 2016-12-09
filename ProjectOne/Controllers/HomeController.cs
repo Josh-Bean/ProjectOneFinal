@@ -86,5 +86,15 @@ namespace ProjectOne.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult CreateUser()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        //public ActionResult CreateUser([Bind(Include = "UserID, Email, Password, FirstName, LastName")])
+
     }
 }
